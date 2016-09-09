@@ -1,1 +1,16 @@
 description = 'Server webapp'
+
+apply plugin: 'war'
+
+dependencies {
+	compile project(':simple-messanger-webservice')
+
+	providedCompile libs.servletApi
+
+	compile libs.springWebmvc
+	compile libs.springBoot
+
+	testCompile libs.tomcatEmbedCore
+	testCompile libs.tomcatEmbedJasper
+	testCompile libs.tomcatJuli
+}

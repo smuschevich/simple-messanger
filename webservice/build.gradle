@@ -1,1 +1,8 @@
 description = 'Application webservice'
+
+dependencies {
+	compile libs.springContext
+
+	compile libs.cxfFrontendJaxWs
+	compile libs.cxfTransportsHttp
+}

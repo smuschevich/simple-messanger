@@ -9,14 +9,35 @@ subprojects {
 	sourceCompatibility = 1.8
 	targetCompatibility = 1.8
 	
-	def springVersion = '4.3.2.RELEASE'	
-
 	repositories {
 		mavenCentral()
 	}
-	
-	dependencies {
+}
+
+ext {
+	def springVersion = '4.3.2.RELEASE'
+	def springBootVersion = '1.4.0.RELEASE'
+	def cxfVersion = '3.1.7'
+	def servletApiVersion = '3.1.0'
+	def tomcatVersion = '8.0.30'
+
+	libs = [
 		// Spring Framework
-		compile "org.springframework:spring-core:$springVersion"
-	}
+		springCore: "org.springframework:spring-core:$springVersion",
+		springContext: "org.springframework:spring-context:$springVersion",
+		springWebmvc: "org.springframework:spring-webmvc:$springVersion",
+		springBoot: "org.springframework.boot:spring-boot:$springBootVersion",
+
+		// Apache CXF
+		cxfFrontendJaxWs: "org.apache.cxf:cxf-rt-frontend-jaxws:$cxfVersion",
+		cxfTransportsHttp: "org.apache.cxf:cxf-rt-transports-http:$cxfVersion",
+
+		// Servlet API
+		servletApi: "javax.servlet:javax.servlet-api:$servletApiVersion",
+
+		// Tomcat
+		tomcatEmbedCore: "org.apache.tomcat.embed:tomcat-embed-core:$tomcatVersion",
+		tomcatEmbedJasper: "org.apache.tomcat.embed:tomcat-embed-jasper:$tomcatVersion",
+		tomcatJuli: "org.apache.tomcat:tomcat-juli:$tomcatVersion"
+	]
 }
