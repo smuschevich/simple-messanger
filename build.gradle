@@ -1,0 +1,22 @@
+allprojects {
+	group = 'com.intexsoft.simple-messanger'
+	version = '1.0.0'
+}
+
+subprojects {
+	apply plugin: 'java'
+	
+	sourceCompatibility = 1.8
+	targetCompatibility = 1.8
+	
+	def springVersion = '4.3.2.RELEASE'	
+
+	repositories {
+		mavenCentral()
+	}
+	
+	dependencies {
+		// Spring Framework
+		compile "org.springframework:spring-core:$springVersion"
+	}
+}

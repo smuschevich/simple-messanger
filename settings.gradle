@@ -1,0 +1,15 @@
+rootProject.name = 'simple-messanger'
+
+include ':simple-messanger-config'
+include ':simple-messanger-persistence'
+include ':simple-messanger-business'
+include ':simple-messanger-webservice'
+include ':simple-messanger-server'
+include ':simple-messanger-client'
+
+project(':simple-messanger-config').projectDir = "$rootDir/config" as File
+project(':simple-messanger-persistence').projectDir = "$rootDir/persistence" as File
+project(':simple-messanger-business').projectDir = "$rootDir/business" as File
+project(':simple-messanger-webservice').projectDir = "$rootDir/webservice" as File
+project(':simple-messanger-server').projectDir = "$rootDir/server" as File
+project(':simple-messanger-client').projectDir = "$rootDir/client" as File
