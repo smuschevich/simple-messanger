@@ -30,7 +30,7 @@ public class ClientWebApplicationBootstrap
 
 	public static void main(String[] args)
 	{
-		ProtocolWebService protocol = SpringApplication.run(ClientWebApplicationBootstrap.class).getBean(ProtocolWebService.class);
+		ProtocolWebService protocol = SpringApplication.run(ClientWebApplicationBootstrap.class, args).getBean(ProtocolWebService.class);
 		boolean res = protocol.sayHello();
 		System.out.println(res);
 	}

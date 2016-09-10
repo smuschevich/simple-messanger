@@ -1,6 +1,7 @@
 package com.intexsoft.simplemessanger.server.config;
 
 import org.apache.cxf.transport.servlet.CXFServlet;
+import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.ServletRegistrationBean;
 import org.springframework.boot.web.support.SpringBootServletInitializer;
 import org.springframework.context.annotation.Bean;
@@ -12,8 +13,14 @@ public class ServerWebApplicationInitializer extends SpringBootServletInitialize
 	private static final String CXF_SERVLET_NAME = "CXFServlet";
 	private static final String CXF_SERVLET_MAPPING = "/services/*";
 
+	@Override
+	protected SpringApplicationBuilder configure(SpringApplicationBuilder builder)
+	{
+		return builder.sources(ServerWebApplicationInitializer.class);
+	}
+
 	@Bean
-	public ServletRegistrationBean dispatcherServlet()
+	public ServletRegistrationBean cxfServlet()
 	{
 		CXFServlet servlet = new CXFServlet();
 		ServletRegistrationBean registration = new ServletRegistrationBean(servlet);

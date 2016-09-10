@@ -6,12 +6,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.context.embedded.EmbeddedServletContainerFactory;
 import org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainerFactory;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 
 import com.intexsoft.simplemessanger.server.config.ServerWebApplicationInitializer;
 
-@Configuration
 @Import(ServerWebApplicationInitializer.class)
 public class ServerWebApplicationBootstrap
 {
@@ -31,6 +29,6 @@ public class ServerWebApplicationBootstrap
 
 	public static void main(String[] args)
 	{
-		SpringApplication.run(ServerWebApplicationBootstrap.class);
+		SpringApplication.run(ServerWebApplicationBootstrap.class, args);
 	}
 }
