@@ -17,6 +17,7 @@ subprojects {
 ext {
 	def springVersion = '4.3.2.RELEASE'
 	def springBootVersion = '1.4.0.RELEASE'
+	def activeMqVersion = '5.7.0'
 	def cxfVersion = '3.1.7'
 	def servletApiVersion = '3.1.0'
 	def tomcatVersion = '8.0.30'
@@ -25,8 +26,12 @@ ext {
 		// Spring Framework
 		springCore: "org.springframework:spring-core:$springVersion",
 		springContext: "org.springframework:spring-context:$springVersion",
+		springJms: "org.springframework:spring-jms:$springVersion",
 		springWebmvc: "org.springframework:spring-webmvc:$springVersion",
 		springBoot: "org.springframework.boot:spring-boot:$springBootVersion",
+
+		// Apache Active MQ
+		activeMq: "org.apache.activemq:activemq-core:$activeMqVersion",
 
 		// Apache CXF
 		cxfFrontendJaxWs: "org.apache.cxf:cxf-rt-frontend-jaxws:$cxfVersion",

@@ -1,1 +1,8 @@
 description = 'Application business logic'
+
+dependencies {
+	compile libs.springContext
+	compile libs.springJms
+
+	compile libs.activeMq
+}

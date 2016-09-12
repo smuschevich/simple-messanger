@@ -9,10 +9,13 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Import;
 
+import com.intexsoft.simplemessanger.business.config.BusinessConfig;
 import com.intexsoft.simplemessanger.webservice.ProtocolWebService;
 
 @Configuration
+@Import({BusinessConfig.class})
 @ComponentScan(basePackages = {"com.intexsoft.simplemessanger.webservice.impl"})
 public class WebServiceConfig
 {

@@ -1,6 +1,8 @@
 description = 'Application webservice'
 
 dependencies {
+	compile project(':simple-messanger-business')
+
 	compile libs.springContext
 
 	compile libs.cxfFrontendJaxWs
