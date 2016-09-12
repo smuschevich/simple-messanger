@@ -20,6 +20,7 @@ ext {
 	def activeMqVersion = '5.7.0'
 	def cxfVersion = '3.1.7'
 	def servletApiVersion = '3.1.0'
+	def webSocketApiVersion = '1.1'
 	def tomcatVersion = '8.0.30'
 
 	libs = [
@@ -28,6 +29,7 @@ ext {
 		springContext: "org.springframework:spring-context:$springVersion",
 		springJms: "org.springframework:spring-jms:$springVersion",
 		springWebmvc: "org.springframework:spring-webmvc:$springVersion",
+		springWebsocket: "org.springframework:spring-websocket:$springVersion",
 		springBoot: "org.springframework.boot:spring-boot:$springBootVersion",
 
 		// Apache Active MQ
@@ -40,9 +42,13 @@ ext {
 		// Servlet API
 		servletApi: "javax.servlet:javax.servlet-api:$servletApiVersion",
 
+		// WebSocket API
+		webSocketApi: "javax.websocket:javax.websocket-api:$webSocketApiVersion",
+
 		// Tomcat
 		tomcatEmbedCore: "org.apache.tomcat.embed:tomcat-embed-core:$tomcatVersion",
 		tomcatEmbedJasper: "org.apache.tomcat.embed:tomcat-embed-jasper:$tomcatVersion",
+		tomcatEmbedWebsocket: "org.apache.tomcat.embed:tomcat-embed-websocket:$tomcatVersion",
 		tomcatJuli: "org.apache.tomcat:tomcat-juli:$tomcatVersion"
 	]
 }

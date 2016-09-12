@@ -6,11 +6,14 @@ dependencies {
 	compile project(':simple-messanger-webservice')
 
 	providedCompile libs.servletApi
+	providedCompile libs.webSocketApi
 
 	compile libs.springWebmvc
+	compile libs.springWebsocket
 	compile libs.springBoot
 
 	testCompile libs.tomcatEmbedCore
 	testCompile libs.tomcatEmbedJasper
+	testCompile libs.tomcatEmbedWebsocket
 	testCompile libs.tomcatJuli
 }

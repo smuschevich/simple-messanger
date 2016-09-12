@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script type="text/javascript" src="scripts/jquery-3.1.0.js"></script>
+		<script type="text/javascript" src="scripts/jquery.WebSocket.js"></script>
+		<script type="text/javascript" src="scripts/bootstrap.js"></script>
+		<script type="text/javascript" src="scripts/app.js"></script>
+		<link rel="stylesheet" href="styles/bootstrap.css">
+		<link rel="stylesheet" href="styles/bootstrap-theme.css">
+	</head>
+	<body>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-xs-12">
+					<h1>Client Webapp</h1>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-6 col-sm-3">
+					<h3>Form</h3>
+					<form id="form">
+						<div class="form-group">
+							<label for="messagesCount">Number of messages</label>
+							<input type="number" class="form-control" id="messagesCount">
+						</div>
+						<div class="form-group">
+							<label for="messagesInterval">Messages interval</label>
+							<input type="number" class="form-control" id="messagesInterval">
+						</div>
+						<div class="form-group">
+							<button type="reset" class="btn btn-default">Reset</button>
+							<button type="submit" class="btn btn-primary">Request</button>
+						</div>
+						<div id="formError" class="alert alert-danger hidden"><span>Please fill the form correctly.</span></div>
+					</form>
+				</div>
+				<div class="col-xs-6 col-sm-9">
+					<h3>Messages</h3>
+					<textarea class="form-control" readonly="readonly" rows="9"></textarea>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
